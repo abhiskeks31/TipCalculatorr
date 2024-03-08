@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="com.example.demo1.TipCalculatorController"
+          hgap="8.0" vgap="8.0"
+          maxHeight="-Infinity" maxWidth="-Infinity"
+          minHeight="-Infinity" minWidth="-Infinity">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0"/>
+    </columnConstraints>
+    <children>
+        <Label text="Amount" GridPane.columnIndex="0"/>
+        <TextField fx:id="amountTextField" GridPane.columnIndex="1"/>
+        <Label text="Tip Percentage" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <Label fx:id="tipPercentageLabel" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Slider fx:id="tipPercentageSlider" min="0" max="30" value="15" blockIncrement="1" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        <Label text="Tip" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <TextField fx:id="tipTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+        <Label text="Total" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+        <TextField fx:id="totalTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+    </children>
+    <padding>
+        <Insets bottom="14.0" left="14.0" right="14.0" top="14.0"/>
+    </padding>
+</GridPane>
